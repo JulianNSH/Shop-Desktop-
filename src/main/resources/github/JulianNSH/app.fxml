@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #888888;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="github.JulianNSH.App">
+   <children>
+      <PasswordField fx:id="passwordField" layoutX="171.0" layoutY="186.0" prefHeight="43.0" prefWidth="258.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </PasswordField>
+      <Button fx:id="submitButton" contentDisplay="CENTER" defaultButton="true" layoutX="254.0" layoutY="254.0" mnemonicParsing="false" onAction="#handleSubmitButtonAction" prefHeight="43.0" prefWidth="91.0" style="-fx-background-color: #00BF49;" text="Log In" textFill="WHITE">
+         <font>
+            <Font name="Droid Sans" size="18.0" />
+         </font>
+      </Button>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="207.0" layoutY="103.0" prefHeight="83.0" prefWidth="198.0" text="Password">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -3,5 +3,6 @@ module SHOP.Desktop {
     requires javafx.controls;
     requires javafx.base;
     requires javafx.graphics;
+    requires java.sql;
     opens github.JulianNSH;
 }

@@ -1,14 +1,84 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="github.JulianNSH.Menu"
-            prefHeight="400.0" prefWidth="600.0">
-
-</AnchorPane>
+<GridPane style="-fx-background-color: #2d3436;" xmlns="http://javafx.com/javafx/11.0.1"
+          xmlns:fx="http://javafx.com/fxml/1" fx:controller="github.JulianNSH.Menu">
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="150.0" prefWidth="150.0"/>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="500.0" prefWidth="500.0"/>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="150.0" prefWidth="150.0"/>
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints maxHeight="70.0" minHeight="70.0" prefHeight="70.0" vgrow="SOMETIMES"/>
+        <RowConstraints maxHeight="600.0" minHeight="-Infinity" prefHeight="300.0" vgrow="SOMETIMES"/>
+        <RowConstraints maxHeight="1.7976931348623157E308" minHeight="70.0" prefHeight="70.0" vgrow="SOMETIMES"/>
+    </rowConstraints>
+    <Button fx:id="logOutButton" alignment="CENTER" mnemonicParsing="false" onAction="#handleMenuButtonsAction"
+            prefHeight="40.0" prefWidth="80.0" style="-fx-background-color: #d63031; -fx-background-radius: 5em;"
+            text="Log Out" textFill="#dfe6e9" GridPane.columnIndex="2" GridPane.halignment="CENTER"
+            GridPane.valignment="CENTER"/>
+    <Label text="Main Menu" textFill="#dfe6e9" GridPane.columnIndex="1" GridPane.halignment="CENTER"
+           GridPane.valignment="CENTER">
+        <font>
+            <Font size="27.0"/>
+        </font>
+    </Label>
+    <GridPane style="-fx-background-color: #2d3436;" GridPane.columnIndex="1" GridPane.halignment="CENTER"
+              GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+        </rowConstraints>
+        <children>
+            <Button fx:id="employeesButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                    minWidth="-Infinity" mnemonicParsing="false" onAction="#handleMenuButtonsAction" prefHeight="40.0"
+                    prefWidth="150.0" style="-fx-background-color: #0984e3;" text="Employees" textFill="#dfe6e9"
+                    GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                <font>
+                    <Font size="18.0"/>
+                </font>
+            </Button>
+            <Button fx:id="productGroupsButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                    minWidth="-Infinity" mnemonicParsing="false" onAction="#handleMenuButtonsAction" prefHeight="40.0"
+                    prefWidth="150.0" style="-fx-background-color: #0984e3;" text="Product Groups" textFill="#dfe6e9"
+                    GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                <font>
+                    <Font size="18.0"/>
+                </font>
+            </Button>
+            <Button fx:id="productsButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                    minWidth="-Infinity" mnemonicParsing="false" onAction="#handleMenuButtonsAction" prefHeight="40.0"
+                    prefWidth="150.0" style="-fx-background-color: #0984e3;" text="Products" textFill="#dfe6e9"
+                    GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                <font>
+                    <Font size="18.0"/>
+                </font>
+            </Button>
+            <Button fx:id="buyersButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                    minWidth="-Infinity" mnemonicParsing="false" onAction="#handleMenuButtonsAction" prefHeight="40.0"
+                    prefWidth="150.0" style="-fx-background-color: #0984e3;" text="Buyers" textFill="#dfe6e9"
+                    GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                <font>
+                    <Font size="18.0"/>
+                </font>
+            </Button>
+            <Button fx:id="salesButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                    minWidth="-Infinity" mnemonicParsing="false" onAction="#handleMenuButtonsAction" prefHeight="40.0"
+                    prefWidth="150.0" style="-fx-background-color: #0984e3;" text="Sales" textFill="#dfe6e9"
+                    GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                <font>
+                    <Font size="18.0"/>
+                </font>
+            </Button>
+        </children>
+    </GridPane>
+</GridPane>

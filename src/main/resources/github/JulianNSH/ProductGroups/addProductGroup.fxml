@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="282.0" prefWidth="600.0" style="-fx-background-color: #2d3436;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="github.JulianNSH.ProductGroups.AddProductGroup">
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints maxHeight="128.0" minHeight="10.0" prefHeight="87.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="232.0" minHeight="10.0" prefHeight="78.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="222.0" minHeight="10.0" prefHeight="71.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="222.0" minHeight="10.0" prefHeight="46.0" vgrow="SOMETIMES" />
+    </rowConstraints>
+    <children>
+        <Button fx:id="addButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleAddPGButton" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: #55efc4; -fx-background-radius: 5em;" text="Add" textFill="#2d3436" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font></Button>
+        <Label text="Add New Product Group" textFill="#dfe6e9" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+        <Label fx:id="errorLabel" alignment="CENTER" prefHeight="17.0" prefWidth="360.0" textFill="#d63031" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+            <font>
+                <Font size="15.0" />
+            </font></Label>
+        <HBox prefHeight="30.0" prefWidth="346.0" GridPane.rowIndex="1">
+            <children>
+                <TextField fx:id="idField" prefHeight="30.0" prefWidth="57.0" promptText="id">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                    <HBox.margin>
+                        <Insets left="130.0" />
+                    </HBox.margin></TextField>
+                <TextField fx:id="productGroupField" prefHeight="30.0" prefWidth="127.0" promptText="Product Group">
+                    <font>
+                        <Font size="14.0" />
+                    </font></TextField>
+                <TextField fx:id="unitsField" prefHeight="30.0" prefWidth="116.0" promptText="Nr Of Units">
+                    <font>
+                        <Font size="14.0" />
+                    </font></TextField>
+            </children>
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+            <GridPane.margin>
+                <Insets bottom="30.0" left="20.0" right="20.0" top="25.0" />
+            </GridPane.margin>
+        </HBox>
+    </children>
+</GridPane>

@@ -8,3 +8,7 @@
 >>>4.1 - Was conceptualized GUI structure of the app
        - Was created and configured the project
        - Was created first interaction window
+
+>>>4.2 - Has been developed,written, applied and tested
+         the entire application interface for all its entities
+            (For logging in is required connection to the database)

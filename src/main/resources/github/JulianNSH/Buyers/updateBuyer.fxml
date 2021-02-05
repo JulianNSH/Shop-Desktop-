@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<GridPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="282.0" prefWidth="600.0" style="-fx-background-color: #2d3436;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="github.JulianNSH.Employees.UpdateEmployee">
+<GridPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="282.0" prefWidth="600.0" style="-fx-background-color: #2d3436;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="github.JulianNSH.Buyers.UpdateBuyer">
     <columnConstraints>
         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
     </columnConstraints>
@@ -16,11 +16,11 @@
         <RowConstraints maxHeight="222.0" minHeight="10.0" prefHeight="46.0" vgrow="SOMETIMES" />
     </rowConstraints>
     <children>
-        <Button fx:id="updateButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleUpdateEmployeeButton" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: #fdcb6e; -fx-background-radius: 5em;" text="Update" textFill="#2d3436" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+        <Button fx:id="updateButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleUpdateBuyerButton" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: #fdcb6e; -fx-background-radius: 5em;" text="Update" textFill="#2d3436" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
             <font>
                 <Font name="System Bold" size="18.0" />
             </font></Button>
-        <Label text="Update Employee Data" textFill="#dfe6e9" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+        <Label text="Update Buyers Data" textFill="#dfe6e9" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
             <font>
                 <Font size="20.0" />
             </font>
@@ -35,23 +35,19 @@
                     <font>
                         <Font size="14.0" />
                     </font></TextField>
-                <TextField fx:id="nameField" prefHeight="25.0" prefWidth="130.0" promptText="Name">
+                <TextField fx:id="nameField" prefHeight="30.0" prefWidth="165.0" promptText="Name">
                     <font>
                         <Font size="14.0" />
                     </font></TextField>
-                <TextField fx:id="surnameField" prefHeight="25.0" prefWidth="130.0" promptText="Surname">
+                <TextField fx:id="surnameField" prefHeight="30.0" prefWidth="145.0" promptText="Surname">
                     <font>
                         <Font size="14.0" />
                     </font></TextField>
-                <TextField fx:id="positionField" prefHeight="25.0" prefWidth="120.0" promptText="Position">
+                <TextField fx:id="acquisitionsField" prefHeight="30.0" prefWidth="132.0" promptText="Acquisitions">
                     <font>
                         <Font size="14.0" />
                     </font></TextField>
-                <TextField fx:id="ageField" prefHeight="25.0" prefWidth="50.0" promptText="Age">
-                    <font>
-                        <Font size="14.0" />
-                    </font></TextField>
-                <TextField fx:id="salaryField" prefHeight="25.0" prefWidth="100.0" promptText="Salary">
+                <TextField fx:id="discountField" prefHeight="30.0" prefWidth="95.0" promptText="Discount">
                     <font>
                         <Font size="14.0" />
                     </font></TextField>

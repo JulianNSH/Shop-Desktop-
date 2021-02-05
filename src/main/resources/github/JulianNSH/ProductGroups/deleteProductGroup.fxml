@@ -4,7 +4,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<GridPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="282.0" prefWidth="600.0" style="-fx-background-color: #2d3436;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="github.JulianNSH.Employees.DeleteEmployee">
+<GridPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="282.0" prefWidth="600.0" style="-fx-background-color: #2d3436;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="github.JulianNSH.ProductGroups.DeleteProductGroup">
     <columnConstraints>
         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
     </columnConstraints>
@@ -15,11 +15,11 @@
         <RowConstraints maxHeight="222.0" minHeight="10.0" prefHeight="46.0" vgrow="SOMETIMES" />
     </rowConstraints>
     <children>
-        <Button fx:id="deleteButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleDeleteEmployeeButton" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: #d63031; -fx-background-radius: 5em;" text="Delete" textFill="#2d3436" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+        <Button fx:id="deleteButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleDeletePGButton" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: #d63031; -fx-background-radius: 5em;" text="Delete" textFill="#2d3436" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
             <font>
                 <Font name="System Bold" size="18.0" />
             </font></Button>
-        <Label text="Delete Employee Data" textFill="#dfe6e9" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+        <Label text="Delete Product Group Data" textFill="#dfe6e9" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
             <font>
                 <Font size="20.0" />
             </font>
@@ -28,10 +28,10 @@
             <font>
                 <Font size="15.0" />
             </font></Label>
-      <TextField fx:id="idField" alignment="CENTER" maxWidth="50.0" minWidth="50.0" prefWidth="50.0" promptText="id" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
-         <font>
-            <Font size="15.0" />
-         </font>
-      </TextField>
+        <TextField fx:id="idField" alignment="CENTER" maxWidth="50.0" minWidth="50.0" prefWidth="50.0" promptText="id" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </TextField>
     </children>
 </GridPane>

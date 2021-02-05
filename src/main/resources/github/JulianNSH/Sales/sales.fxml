@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane style="-fx-background-color: #2d3436;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="github.JulianNSH.Sales.Sales">
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="150.0" prefWidth="150.0" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="500.0" prefWidth="500.0" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="150.0" prefWidth="150.0" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints maxHeight="70.0" minHeight="70.0" prefHeight="70.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="600.0" minHeight="-Infinity" prefHeight="300.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="70.0" minHeight="70.0" prefHeight="70.0" vgrow="SOMETIMES" />
+    </rowConstraints>
+    <children>
+        <Button fx:id="logOutButton" alignment="CENTER" mnemonicParsing="false" onAction="#handleSalesButtonsAction" prefHeight="40.0" prefWidth="80.0" style="-fx-background-color: #d63031; -fx-background-radius: 5em;" text="Log Out" textFill="#dfe6e9" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+        <Label text="Sales" textFill="#dfe6e9" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+            <font>
+                <Font size="27.0" />
+            </font>
+        </Label>
+        <GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="170.0" prefWidth="150.0" GridPane.halignment="CENTER" GridPane.hgrow="NEVER" GridPane.valignment="CENTER" GridPane.vgrow="NEVER">
+            <columnConstraints>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Button fx:id="backButton" mnemonicParsing="false" onAction="#handleSalesButtonsAction" opacity="0.5" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 5em; -fx-background-color: #74b9ff;" text="🢀" textFill="#2d3436" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font></Button>
+                <Button fx:id="refreshButton" contentDisplay="CENTER" graphicTextGap="0.0" mnemonicParsing="false" onAction="#handleSalesButtonsAction" opacity="0.5" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 5em; -fx-background-color: #74b9ff;" text="⭮" textFill="#2d3436" textOverrun="CLIP" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                    <GridPane.margin>
+                        <Insets />
+                    </GridPane.margin></Button>
+            </children>
+        </GridPane>
+        <TableView style="-fx-background-color: #b2bec3;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <columns>
+                <TableColumn editable="false" maxWidth="1.7976931348623157E308" prefWidth="40.0" sortable="false" text="id" />
+                <TableColumn editable="false" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="366.0" sortable="false" text="Product Name" />
+                <TableColumn editable="false" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="93.0" sortable="false" text="Sale" />
+            </columns>
+        </TableView>
+        <GridPane GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Button fx:id="addSaleButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleSalesButtonsAction" prefHeight="40.0" prefWidth="80.0" style="-fx-background-color: #55efc4; -fx-background-radius: 5em;" text="Add" textFill="#2d3436" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font></Button>
+                <Button fx:id="updateSaleButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleSalesButtonsAction" prefHeight="40.0" prefWidth="80.0" style="-fx-background-color: #fdcb6e; -fx-background-radius: 5em;" text="Update" textFill="#2d3436" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font></Button>
+                <Button fx:id="deleteSaleButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleSalesButtonsAction" prefHeight="40.0" prefWidth="80.0" style="-fx-background-color: #d63031; -fx-background-radius: 5em;" text="Delete" textFill="#2d3436" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font></Button>
+            </children>
+        </GridPane>
+    </children>
+</GridPane>

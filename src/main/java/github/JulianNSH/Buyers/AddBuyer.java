@@ -1,5 +1,6 @@
 package github.JulianNSH.Buyers;
 
+import github.JulianNSH.DatabaseConnector;
 import github.JulianNSH.Employees.AddEmployee;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -10,6 +11,11 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
 /*
 Controller to add 1 row in Database
  */
@@ -34,7 +40,7 @@ public class AddBuyer {
     Label errorLabel;
 
     //Check if all was inputted correctly
-    public void handleAddBuyerButton(ActionEvent actionButton) {
+    public void handleAddBuyerButton(ActionEvent actionButton) throws SQLException {
         if(actionButton.getSource() == addButton){
             if(idField.getText().isEmpty() || nameField.getText().isEmpty() || surnameField.getText().isEmpty() ||
                     acquisitionsField.getText().isEmpty() || discountField.getText().isEmpty()){
@@ -43,7 +49,22 @@ public class AddBuyer {
             } else {
                 //apply query and exit
                 //add data to Database
+                Connection connector = DatabaseConnector.connect();
+                if(connector!=null){
+                    String sqlQuery = "INSERT INTO buyerscc(id_buyer, name_buyer, surname_buyer, acquisitions, discount) VALUES(?,?,?,?,?)";
+                    PreparedStatement sqlStatement = connector.prepareStatement(sqlQuery);
 
+                    //set data from fxml fields to the query by index
+                    sqlStatement.setInt(1, Integer.parseInt(idField.getText()));
+                    sqlStatement.setString(2, nameField.getText());
+                    sqlStatement.setString(3, surnameField.getText());
+                    sqlStatement.setDouble(4, Double.parseDouble(acquisitionsField.getText()));
+                    sqlStatement.setInt(5, Integer.parseInt(discountField.getText()));
+
+                    sqlStatement.executeUpdate();
+                    sqlStatement.close();
+                    System.out.println("Row added successfully");
+                }
                 //close scene
                 Stage stage = (Stage) addButton.getScene().getWindow();
                 stage.close();

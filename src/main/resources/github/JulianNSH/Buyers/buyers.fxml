@@ -45,13 +45,13 @@
                     </GridPane.margin></Button>
             </children>
         </GridPane>
-        <TableView style="-fx-background-color: #b2bec3;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+        <TableView fx:id="tableView" style="-fx-background-color: #b2bec3;" GridPane.columnIndex="1" GridPane.rowIndex="1">
             <columns>
-                <TableColumn editable="false" maxWidth="1.7976931348623157E308" prefWidth="40.0" sortable="false" text="id" />
-                <TableColumn editable="false" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="132.0" sortable="false" text="Name" />
-                <TableColumn editable="false" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="127.0" sortable="false" text="Surname" />
-                <TableColumn editable="false" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="123.0" sortable="false" text="Acquisitions" />
-                <TableColumn editable="false" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="77.0" sortable="false" text="Discount" />
+                <TableColumn fx:id="buyerId" editable="false" maxWidth="1.7976931348623157E308" prefWidth="40.0" sortable="false" text="id" />
+                <TableColumn fx:id="buyerName" editable="false" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="132.0" sortable="false" text="Name" />
+                <TableColumn fx:id="buyerSurname" editable="false" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="127.0" sortable="false" text="Surname" />
+                <TableColumn fx:id="buyerAcquisitions" editable="false" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="112.0" sortable="false" text="Acquisitions" />
+                <TableColumn fx:id="buyerDiscount" editable="false" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="88.0" sortable="false" text="Discount(%)" />
             </columns>
         </TableView>
         <GridPane GridPane.columnIndex="1" GridPane.rowIndex="2">

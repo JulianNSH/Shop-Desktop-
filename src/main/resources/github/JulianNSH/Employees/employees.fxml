@@ -45,14 +45,14 @@
                </GridPane.margin></Button>
          </children>
       </GridPane>
-      <TableView style="-fx-background-color: #b2bec3;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+      <TableView fx:id="tableView" style="-fx-background-color: #b2bec3;" GridPane.columnIndex="1" GridPane.rowIndex="1">
         <columns>
-          <TableColumn editable="false" maxWidth="1.7976931348623157E308" prefWidth="40.0" sortable="false" text="id" />
-          <TableColumn editable="false" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="120.0" sortable="false" text="Name" />
-            <TableColumn editable="false" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="120.0" sortable="false" text="Surname" />
-            <TableColumn editable="false" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="100.0" sortable="false" text="Position" />
-            <TableColumn editable="false" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="40.0" sortable="false" text="Age" />
-            <TableColumn editable="false" maxWidth="1.7976931348623157E308" minWidth="-Infinity" sortable="false" text="Salary" />
+          <TableColumn fx:id="employeeId" editable="false" maxWidth="1.7976931348623157E308" prefWidth="40.0" sortable="false" text="id" />
+          <TableColumn fx:id="employeeName" editable="false" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="120.0" sortable="false" text="Name" />
+            <TableColumn fx:id="employeeSurname" editable="false" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="120.0" sortable="false" text="Surname" />
+            <TableColumn fx:id="employeePosition" editable="false" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="100.0" sortable="false" text="Position" />
+            <TableColumn fx:id="employeeAge" editable="false" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="40.0" sortable="false" text="Age" />
+            <TableColumn fx:id="employeeSalary" editable="false" maxWidth="1.7976931348623157E308" minWidth="-Infinity" sortable="false" text="Salary" />
         </columns>
       </TableView>
       <GridPane GridPane.columnIndex="1" GridPane.rowIndex="2">

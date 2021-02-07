@@ -13,6 +13,7 @@ public class DatabaseConnector {
 
     public DatabaseConnector(){}
 
+    //overloading for first connection (logging in)
     public static Connection connect(String user, String password) {
         DatabaseConnector.user = user;
         DatabaseConnector.password = password;
@@ -24,6 +25,17 @@ public class DatabaseConnector {
             System.out.println(e.getMessage());
         }
 
+        return conn;
+    }
+    //method used after logging in
+    public static Connection connect(){
+        Connection conn = null;
+        try {
+            conn = DriverManager.getConnection(url, user, password);
+            //System.out.println("Connected to PG server");
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
         return conn;
     }
 }

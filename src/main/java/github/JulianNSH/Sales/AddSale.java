@@ -1,5 +1,6 @@
 package github.JulianNSH.Sales;
 
+import github.JulianNSH.DatabaseConnector;
 import github.JulianNSH.Products.AddProduct;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -10,6 +11,10 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 
 public class AddSale {
     public static void addSaleScene() throws Exception {
@@ -29,7 +34,7 @@ public class AddSale {
     @FXML
     Label errorLabel;
 
-    public void handleAddPSaleButton(ActionEvent actionButton) {
+    public void handleAddPSaleButton(ActionEvent actionButton) throws SQLException {
         if(actionButton.getSource() == addButton){
             if(idField.getText().isEmpty() || productIdField.getText().isEmpty() ||
                     saleField.getText().isEmpty()){
@@ -37,7 +42,19 @@ public class AddSale {
                 errorLabel.setText("Empty data. Complete all fields!");
             } else {
                 //add data to Database
+                Connection connector = DatabaseConnector.connect();
+                if(connector!=null){
+                    String sqlQuery = "INSERT INTO sales(id_sale, id_product, discount) VALUES(?,?,?)";
+                    PreparedStatement sqlStatement = connector.prepareStatement(sqlQuery);
 
+                    sqlStatement.setInt(1, Integer.parseInt(idField.getText()));
+                    sqlStatement.setInt(2, Integer.parseInt(productIdField.getText()));
+                    sqlStatement.setInt(3, Integer.parseInt(saleField.getText()));
+
+                    sqlStatement.executeUpdate();
+                    sqlStatement.close();
+                    System.out.println("Row added successfully");
+                }
                 //close scene
                 Stage stage = (Stage) addButton.getScene().getWindow();
                 stage.close();

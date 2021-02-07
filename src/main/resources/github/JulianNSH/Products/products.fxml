@@ -45,12 +45,12 @@
                     </GridPane.margin></Button>
             </children>
         </GridPane>
-        <TableView style="-fx-background-color: #b2bec3;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+        <TableView fx:id="tableView" style="-fx-background-color: #b2bec3;" GridPane.columnIndex="1" GridPane.rowIndex="1">
             <columns>
-                <TableColumn editable="false" maxWidth="1.7976931348623157E308" prefWidth="40.0" sortable="false" text="id" />
-                <TableColumn editable="false" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="232.0" sortable="false" text="Name" />
-                <TableColumn editable="false" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="128.0" sortable="false" text="Group" />
-                <TableColumn editable="false" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="98.0" sortable="false" text="Price" />
+                <TableColumn fx:id="productId" editable="false" maxWidth="1.7976931348623157E308" prefWidth="40.0" sortable="false" text="id" />
+                <TableColumn fx:id="productName" editable="false" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="232.0" sortable="false" text="Name" />
+                <TableColumn fx:id="productGroup" editable="false" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="128.0" sortable="false" text="Group" />
+                <TableColumn fx:id="productPrice" editable="false" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="98.0" sortable="false" text="Price" />
             </columns>
         </TableView>
         <GridPane GridPane.columnIndex="1" GridPane.rowIndex="2">

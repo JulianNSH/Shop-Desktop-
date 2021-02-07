@@ -1,6 +1,7 @@
 package github.JulianNSH.Products;
 
 import github.JulianNSH.Buyers.AddBuyer;
+import github.JulianNSH.DatabaseConnector;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -10,6 +11,10 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 
 public class UpdateProduct {
     public static void updateProductScene()throws Exception {
@@ -28,15 +33,28 @@ public class UpdateProduct {
     TextField idField, nameField, groupIdField, priceField;
     @FXML
     Label errorLabel;
-    public void handleUpdateProductButton(ActionEvent actionButton) {
+    public void handleUpdateProductButton(ActionEvent actionButton) throws SQLException {
         if(actionButton.getSource() == updateButton){
             if(idField.getText().isEmpty() || nameField.getText().isEmpty() ||
                     groupIdField.getText().isEmpty() || priceField.getText().isEmpty()){
 
                 errorLabel.setText("Empty data. Complete all fields ");
             } else {
-                //add data to Database
+                //update data to Database
+                Connection connector = DatabaseConnector.connect();
+                if(connector!=null){
+                    String sqlQuery = "UPDATE products SET name_product = ?, id_group = ?, price = ? WHERE id_product = ?";
+                    PreparedStatement sqlStatement = connector.prepareStatement(sqlQuery);
 
+                    sqlStatement.setString(1, nameField.getText());
+                    sqlStatement.setInt(2, Integer.parseInt(groupIdField.getText()));
+                    sqlStatement.setDouble(3, Double.parseDouble(priceField.getText()));
+                    sqlStatement.setInt(4, Integer.parseInt(idField.getText()));
+
+                    sqlStatement.executeUpdate();
+                    sqlStatement.close();
+                    System.out.println("Row updated successfully");
+                }
                 //close scene
                 Stage stage = (Stage) updateButton.getScene().getWindow();
                 stage.close();

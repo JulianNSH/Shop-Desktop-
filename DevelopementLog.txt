@@ -9,6 +9,10 @@
        - Was created and configured the project
        - Was created first interaction window
 
->>>4.2 - Has been developed,written, applied and tested
+>>>4.2 - Has been developed, written, applied and tested
          the entire application interface for all its entities
             (For logging in is required connection to the database)
+
+>>>4.3 - Has been added the functionality that allows the display,
+                add, edit and delete  data in the database, for each entity
+       - The database dump has also been added in project directory

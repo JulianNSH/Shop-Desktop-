@@ -45,11 +45,11 @@
                     </GridPane.margin></Button>
             </children>
         </GridPane>
-        <TableView style="-fx-background-color: #b2bec3;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+        <TableView fx:id="tableView" style="-fx-background-color: #b2bec3;" GridPane.columnIndex="1" GridPane.rowIndex="1">
             <columns>
-                <TableColumn editable="false" maxWidth="1.7976931348623157E308" prefWidth="40.0" sortable="false" text="id" />
-                <TableColumn editable="false" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="366.0" sortable="false" text="Product Name" />
-                <TableColumn editable="false" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="93.0" sortable="false" text="Sale" />
+                <TableColumn fx:id="saleId" editable="false" maxWidth="1.7976931348623157E308" prefWidth="40.0" sortable="false" text="id" />
+                <TableColumn fx:id="saleProduct" editable="false" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="366.0" sortable="false" text="Product Name" />
+                <TableColumn fx:id="sale" editable="false" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="93.0" sortable="false" text="Sale(%)" />
             </columns>
         </TableView>
         <GridPane GridPane.columnIndex="1" GridPane.rowIndex="2">

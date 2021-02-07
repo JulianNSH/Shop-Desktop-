@@ -1,5 +1,6 @@
 package github.JulianNSH.Sales;
 
+import github.JulianNSH.DatabaseConnector;
 import github.JulianNSH.Products.DeleteProduct;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -10,6 +11,10 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 
 public class DeleteSale {
     public static void deleteSaleScene() throws Exception{
@@ -29,14 +34,27 @@ public class DeleteSale {
     @FXML
     Label errorLabel;
 
-    public void handleDeleteSaleButton(ActionEvent actionButton) {
+    public void handleDeleteSaleButton(ActionEvent actionButton) throws SQLException {
         if(actionButton.getSource() == deleteButton){
             if(idField.getText().isEmpty()){
 
                 errorLabel.setText("Empty field. Write ID to delete");
             } else {
                 //delete from Database
+                Connection connector = DatabaseConnector.connect();
+                if(connector!=null) {
+                    //prepare SQL query and statement
+                    String sqlQuery = "DELETE FROM sales WHERE id_sale = ?";
+                    PreparedStatement sqlStatement = connector.prepareStatement(sqlQuery);
 
+                    //apply query to statement
+                    sqlStatement.setInt(1, Integer.parseInt(idField.getText()));
+
+                    //update and close table
+                    sqlStatement.executeUpdate();
+                    sqlStatement.close();
+                    System.out.println("Row deleted successfully");
+                }
                 //close scene
                 Stage stage = (Stage) deleteButton.getScene().getWindow();
                 stage.close();

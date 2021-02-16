@@ -47,7 +47,7 @@ Features
 
 ![alt text](https://github.com/JulianNSH/Shop-desktop/blob/master/screenshots/screen6.png?raw=true "Delete")
 
-![alt text](https://github.com/JulianNSH/Shop-desktop/blob/master/screenshots/screen6.png?raw=true "Result")
+![alt text](https://github.com/JulianNSH/Shop-desktop/blob/master/screenshots/screen6.1.png?raw=true "Result")
 
 - In those windows are also present: <br>
       GoBack button - to move to previous window;<br>

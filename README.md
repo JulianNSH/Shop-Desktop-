@@ -49,6 +49,7 @@ Features
 
 ![alt text](https://github.com/JulianNSH/Shop-desktop/blob/master/screenshots/screen6.png?raw=true "Result")
 
-- In those windows are also present: GoBack button - to move to previous window;
-                                     Refresh button - for window content renewal;
-                                     LogOut button - to exit from interaction menu to LogIn window.
+- In those windows are also present: <br>
+      GoBack button - to move to previous window;<br>
+      Refresh button - for window content renewal;<br>
+      LogOut button - to exit from interaction menu to LogIn window.

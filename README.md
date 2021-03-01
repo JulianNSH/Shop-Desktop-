@@ -39,7 +39,7 @@ Features
 
 - Updating Data
 
-![alt text](https://github.com/JulianNSH/Shop-desktop/blob/master/screenshots/screen5.png?raw=true "Update")
+![alt text](https://github.com/JulianNSH/Shop-desktop/blob/master/screenshots/screen55.png?raw=true "Update")
 
 ![alt text](https://github.com/JulianNSH/Shop-desktop/blob/master/screenshots/screen5.1.png?raw=true "Result")
 

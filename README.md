@@ -12,7 +12,7 @@ This is a continuation of the previous application ([GitHub](https://github.com/
 
 Instruments
 ------
-* JDK 8+
+* JDK 1.8
 * Build: Maven 4.0.0
 * Database: PostgreSQL 13
 * GUI: JavaFX 13
